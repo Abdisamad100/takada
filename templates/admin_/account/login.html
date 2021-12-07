@@ -2,15 +2,41 @@
 {% load static %}
 
 {% block content %}
+<!-- <img src="/static/images/Eid_pic.JPG" alt="image" height="350" width="500" style="margin-left: 30%;" > -->
+<!-- Jumbotron -->
+<div
+  class="p-5 text-center bg-image rounded-3"
+  style="
+    background-image: url('https://mdbootstrap.com/img/new/slides/041.jpg');
+    height: 400px;
+  "
+>
+  <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+    <div class="d-flex justify-content-center align-items-center h-100">
+      <div class="text-white">
+        <h1 class="mb-3">Safe and secure system</h1>
+        <!-- <h4 class="mb-3">Subheading</h4> -->
+        <a class="btn btn-outline-light btn-lg" href="#!" role="button">Jubaland Quality control service</a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Jumbotron -->
+ 
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <div class="form-holder">
+          <center>
+            <img src="http://www.jubalandquality.com/static/image/jubaland-logo.png" alt="" style="border-width: 10px; border-radius: 50%; border-color: green; border-style: solid;">
+            </center>
+          <h1>Admin Login</h1>
+          
+          <hr class="dropdown-divider">
 
-  
-          <div class="container">
-            <div class="row">
-              <div class="col-md-6 offset-md-3 my-3">
-                <h1>Admin Login</h1>
-                <div>
-                  {% include './../components/errors.html' %}
-                </div>
+          <div>
+              {% include './../components/errors.html' %}
+          </div>
           <form action="" method="POST">
             {% csrf_token %}
             <div class="mb-3">
@@ -18,7 +44,7 @@
                 <strong>Username</strong>
               </label>
               <input type="text" class="form-control shadow-none" id="email" name="username" aria-describedby="emailHelp"
-                placeholder="Enter email" required>
+                placeholder="Enter email">
               <!-- <div id="emailHelp" class="form-text">Please enter your email here</div> -->
             </div>
             <div class="mb-3">
@@ -26,7 +52,7 @@
                 <strong>Password</strong>
               </label>
               <input type="password" class="form-control shadow-none" name="password" id="password"
-                placeholder="password" required>
+                placeholder="PASSWORD">
             </div>
             <button type="submit" class="btn btn-primary rounded-pill px-5">Login</button>
             <div class="my-2">
@@ -37,5 +63,143 @@
       </div>
     </div>
   </div>
+<!-- Footer -->
+<footer class="page-footer font-small unique-color-dark">
 
+  <div style="background-color: #6351ce;">
+    <div class="container">
+
+      <!-- Grid row-->
+      <div class="row py-4 d-flex align-items-center">
+
+        <!-- Grid column -->
+        <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+          <h6 class="mb-0">Get connected with us on social networks!</h6>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-6 col-lg-7 text-center text-md-right">
+
+          <!-- Facebook -->
+          <a class="fb-ic">
+            <i class="fab fa-facebook-f white-text mr-4"> </i>
+          </a>
+          <!-- Twitter -->
+          <a class="tw-ic">
+            <i class="fab fa-twitter white-text mr-4"> </i>
+          </a>
+          <!-- Google +-->
+          <a class="gplus-ic">
+            <i class="fab fa-google-plus-g white-text mr-4"> </i>
+          </a>
+          <!--Linkedin -->
+          <a class="li-ic">
+            <i class="fab fa-linkedin-in white-text mr-4"> </i>
+          </a>
+          <!--Instagram-->
+          <a class="ins-ic">
+            <i class="fab fa-instagram white-text"> </i>
+          </a>
+
+        </div>
+        <!-- Grid column -->
+
+      </div>
+      <!-- Grid row-->
+
+    </div>
+  </div>
+
+  <!-- Footer Links -->
+  <div class="container text-center text-md-left mt-5">
+
+    <!-- Grid row -->
+    <div class="row mt-3">
+
+      <!-- Grid column -->
+      <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+
+        <!-- Content -->
+        <h6 class="text-uppercase font-weight-bold">Jubaland Quality control Service</h6>
+        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p>JQCS provides quality control inspections, factory audits, supplier evaluations, 
+          consumer product testing, production control and management, and quality control consulting throughout Somali Region.
+           It has been said that trust is hard to earn and easy to lose..</p>
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+
+        <!-- Links -->
+        <h6 class="text-uppercase font-weight-bold">Products</h6>
+        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p>
+          <a href="#!">inspections</a>
+        </p>
+        <p>
+          <a href="#!">Testing</a>
+        </p>
+        <p>
+          <a href="#!">consulting</a>
+        </p>
+        <p>
+          <a href="#!">Trust</a>
+        </p>
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+
+        <!-- Links -->
+        <h6 class="text-uppercase font-weight-bold">Useful links</h6>
+        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p>
+          <a href="http://www.jubalandquality.com/">Visit our home page</a>
+        </p>
+ 
+
+
+ <!-- git remote set-url origin https://sampleuser:a7b19929***58fe65d1c@github.com/sampleuser/sampleproject.git -->
+       
+        <!-- git remote set-url origin https://username:EidAbdullahi@github.com/EidAbdullahi/repository.git -->
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+        <!-- Links -->
+        <h6 class="text-uppercase font-weight-bold">Contact</h6>
+        <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p>
+          <i class="fas fa-home mr-3"></i>Caymis road, Kismayo, somalia</p>
+        <p>
+          <i class="fas fa-envelope mr-3"></i> info@jubalandqualiy.com</p>
+        <p>
+          <i class="fas fa-phone mr-3"></i>  + 252612032664</p>
+        <p>
+          <i class="fas fa-print mr-3"></i>  + 252616772852</p>
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+  </div>
+  <!-- Footer Links -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2021 Copyright:
+    <a href="">product, Eid Abdullahi </a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
 {% endblock content %}
