@@ -26,7 +26,7 @@ def register(request):
             if not User.objects.filter(email=email).exists():
                 if User.objects.filter(username=username).exists():
                     messages.error(request,
-                                   'The username has been taken! Please try again with another username.')
+                                   'Magacan horaa loisticmalay! Fadlan Isticmal magac kaduwan.')
                     return redirect('register')
                 else:
                     try:
@@ -38,7 +38,7 @@ def register(request):
                         # user.userprofile.phone_number = pnumber
                         
                         user.save()
-                        messages.success(request, 'You have successfully signed up for an instructor account!')
+                        messages.success(request, 'waad kugulaysatay Isdiwaangalintan mahadsanid')
 
                         return redirect('login')
 
@@ -48,10 +48,10 @@ def register(request):
 
             else:
                 messages.error(request,
-                               'The email has been taken! Please try again with another email.')
+                               'Emailkan horaa lo isticmalay! Fadlan Kugal Email Kale.')
                 return redirect('register')
         else:
-            messages.error(request, 'Passwords do not match!! Please recheck your passwords and try to sign up again')
+            messages.error(request, 'Passwordka aad kucelisay waa qalad!! Fadlan iskahubi marlabaad')
             return redirect('register')
 
     return render(request, template_name='admin_/account/register.html', context={'page': 'register'})
@@ -66,10 +66,10 @@ def login_(request):
         user = authenticate(username=username, password=password)
         if user is not None:
             login(request, user)
-            messages.success(request, 'You have successfully logged In!')
+            messages.success(request, 'waad kugulaysatay inaad horeey ugaasho!')
             return redirect('home')
         else:
-            messages.error(request, 'Login failed! Check your username and password.')
+            messages.error(request, 'wankaxunahay Fadland iskahubi numberka sirta aah.')
             return redirect('login')
     return render(request, template_name='admin_/account/login.html', context={'page': 'login'})
 

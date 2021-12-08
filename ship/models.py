@@ -16,7 +16,7 @@ class Ship(models.Model):
 class Container(models.Model):
     PRICES = (
         ('112.5', '112.5'),
-        ('62', '62')
+        ('65', '65')
     )
 
     SIDES = (

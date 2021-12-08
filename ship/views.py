@@ -22,7 +22,7 @@ def registernewship(request):
         shipform = CreateShipForm(request.POST)
         if shipform.is_valid():
             shipform.save()
-            messages.success(request, 'Ship has been added successfully')
+            messages.success(request, 'Waad gulaysatay diwangalinta markabka')
             return redirect('registership')
         else:
             messages.error(request, 'Adding the ship failed')
