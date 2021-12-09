@@ -36,6 +36,7 @@ class Container(models.Model):
         ('20ft', '20ft'),
     )
     
+    
     ship = models.ForeignKey(Ship, on_delete=models.SET_NULL, null=True, blank=True)
     date = models.DateField()
     company_name = models.CharField(max_length=200, blank=True, null=True)
