@@ -26,13 +26,19 @@
         <div class="common-card overflowx-hidden">
           <div class="row">
             <div class="col-md-6 col-sm-12 my-2">
-              <h1 class="text-capitalize">{{ship.name}} {{ship.date}}</h1>
+              <h1 class="text-capitalize">{{ship.name}}</h1>
             </div>
-            <div class="col-md-6 col-sm-12 my-2">
-              <a href="{% url 'registercontainer' ship_id=ship.id ship_name=ship.name %}" class="rounded-pill btn btn-primary px-4 shadow-none">
+            <div class="col-md-3 col-sm-12 my-2">
+              <a href="{% url 'registercontainer' ship_id=ship.id ship_name=ship.name %}" class="rounded-pill btn btn-primary px-4 shadow-none" >
                 Register new container
               </a>
             </div>
+            {% if ship.ship_docs%}
+            <div class="col-md-3 col-sm-12 my-2">
+              <a href="{{ship.ship_docs.url}}"  class="rounded-pill btn btn-outline-primary px-4 shadow-none">Download Document</a>
+            </div>
+
+            {% endif %} 
           </div>
           {% if containers %}
           <hr class="dropdown-divider">
@@ -75,10 +81,10 @@
                       title="Edit container">
                       <i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i>
                     </a>
-                    <!-- <a href="{% url 'containerdelete' pk=container.id %}" class="btn text-danger" data-bs-toggle="tooltip" data-bs-placement="top"
+                    <a href="{% url 'containerdelete' pk=container.id %}" class="btn text-danger" data-bs-toggle="tooltip" data-bs-placement="top"
                       title="Delete container">
                       <i class="fa fa-trash-o fa-2x" aria-hidden="true"></i>
-                    </a> -->
+                    </a>
                   </td>
                 </tr>
                 
