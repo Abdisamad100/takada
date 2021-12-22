@@ -3,6 +3,7 @@ from django.conf.urls.static import static
 from django.urls import path
 from .views import *
 
+
 urlpatterns = [
     path('register/new-ship/', registernewship, name='registership'),
     path('register/new-container/<str:ship_id>/<str:ship_name>/', registernewcontainer, name='registercontainer'),

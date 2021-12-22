@@ -3,6 +3,9 @@ from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect, get_object_or_404
 from .forms import *
 
+
+
+
 @login_required(login_url='login')
 def shipdetails(request, ship_id, ship_name):
     ship = Ship.objects.get(id=ship_id)
