@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 from django.utils.timezone import now
 from datetime import datetime
 from django.core.validators import FileExtensionValidator
-
+from cloudinary.models import CloudinaryField
 
 class Ship(models.Model):
     name = models.TextField(blank=True, null=True, max_length=200)
