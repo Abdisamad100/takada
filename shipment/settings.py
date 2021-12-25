@@ -26,7 +26,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'boom'
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -110,13 +110,17 @@ else:
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
 
-cloudinary.config( 
-  cloud_name = "duwcyaitg", 
-  api_key = "845663342138117", 
-  api_secret = "BPb5u0vZfuqvk0ZKWSJgTlLDhPg" 
-)
+# DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 
+CLOUDINARY_STORAGE = { 
+    'CLOUD_NAME': "duwcyaitg",
+    'API_KEY': "845663342138117",
+    'API_SECRET': "BPb5u0vZfuqvk0ZKWSJgTlLDhPg" 
+}
+
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 

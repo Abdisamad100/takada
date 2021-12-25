@@ -10,7 +10,8 @@ class Ship(models.Model):
     date = models.DateField()
     no_of_containers = models.CharField(max_length=10, blank=True, null=True)
     date_created = models.DateTimeField(auto_now_add=True)
-    ship_docs = models.FileField(upload_to='ShipDocuments/', validators=[FileExtensionValidator(allowed_extensions=['pdf'])], blank=True, null=True)
+    ship_docs =  models.ImageField(upload_to='ShipDocuments/', blank=True, null=True)
+    # ship_docs = models.FileField(upload_to='ShipDocuments/', validators=[FileExtensionValidator(allowed_extensions=['pdf'])], blank=True, null=True)
 
     def __str__(self):
         return self.name
@@ -18,7 +19,7 @@ class Ship(models.Model):
 class Container(models.Model):
     PRICES = (
         ('112.5', '112.5'),
-        ('62', '62')
+        ('65', '65')
     )
 
     SIDES = (
@@ -63,8 +64,8 @@ class Boat(models.Model):
     tone = models.IntegerField(blank=True, null=True)
     date_time= models.DateTimeField()
     status = models.CharField(max_length=10, choices=CHOICES, default='Pending')
-    boat_docs = models.FileField(upload_to='BoatDocuments/',validators=[FileExtensionValidator(allowed_extensions=['pdf'])], blank=True, null=True)
-
+    # boat_docs = models.FileField(upload_to='BoatDocuments/',validators=[FileExtensionValidator(allowed_extensions=['pdf'])], blank=True, null=True)
+    boat_docs = models.ImageField(upload_to='BoatDocuments/', blank=True, null=True)
     def __str__(self):
         return self.name
 
